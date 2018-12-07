@@ -32,3 +32,17 @@ class TrainingLesson(models.Model):
     subject_id = fields.Many2one('pscloud.training.subject', string='科目')
     person_id = fields.Many2one('res.partner', related='subject_id.person_id', readonly=True)
     desc = fields.Text(string='描述')
+    
+    @api.constrains('start_date', 'end_date')
+    def _check_closing_date(self):
+        for lesson in self:
+            if lesson.end_date < lesson.start_date:
+                raise ValidationError('开始时间不能大于结束时间')
+
+    @api.multi
+    def name_get(self):
+        return [(lesson.id, '%s:%s' % (lesson.name, lesson.teacher_id.name)) for lesson in self]
+
+    @api.multi
+    def action_confirm(self):
+        return self.write({'state': 'confirm'})
