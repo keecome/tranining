@@ -79,8 +79,7 @@
                             </group>
                         </group>
                         <notebook>
-                            <page string="学生">
-                                <!-- button name="%(action_training_student_regiester_view)d" type="action" string="学生注册"  states="confirm" / -->
+                            <page string="学生">                                
                                 <field name="student_ids"/>
                             </page>
                         </notebook>
