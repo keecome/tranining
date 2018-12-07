@@ -3,5 +3,3 @@ access_pscloud_training_lesson,access_pscloud_training_lesson,model_pscloud_trai
 access_pscloud_training_subject,access_pscloud_training_subject,model_pscloud_training_subject,base.group_user,1,0,0,0
 access_ot_traning_lesson,pscloud.training.lesson,ot_traning.model_pscloud_training_lesson,base.group_user,1,1,1,1
 access_ot_traning_subject,pscloud.training.subject,ot_traning.model_pscloud_training_subject,base.group_user,1,1,1,1
-access_pscloud_training_lesson,access_pscloud_training_lesson,model_pscloud_training_lesson,base.group_user,1,0,0,0
-access_pscloud_training_subject,access_pscloud_training_subject,model_pscloud_training_subject,base.group_user,1,0,0,0
